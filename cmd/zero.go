@@ -16,7 +16,7 @@ func Add(first string, second string) (result string) {
 		fmt.Println("Error: second value is invalid")
 		return
 	}
-	return fmt.Sprintf("%f", num1+num2)
+	return fmt.Sprintf("%v", num1+num2)
 }
 
 func Subtract(first string, second string) (result string) {
@@ -30,5 +30,9 @@ func Subtract(first string, second string) (result string) {
 		fmt.Println("Error: second value is invalide")
 		return
 	}
-	return fmt.Sprintf("%f", num1-num2)
+	return fmt.Sprintf("%v", num1-num2)
+}
+
+func Multiply(first string, second string, roundup bool) (result string){
+	
 }
