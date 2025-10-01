@@ -7,6 +7,7 @@ import (
 )
 
 func main() {
+	fmt.Println("")
 	cmd.Execute()
 	fmt.Println("Executed")
 }

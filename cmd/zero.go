@@ -50,17 +50,17 @@ func Multiply(first string, second string, roundup bool) (result string) {
 	return fmt.Sprintf("%v", num1*num2)
 }
 
-func Divide(first string, second string, roundup bool) (e error, result string) {
+func Divide(first string, second string, roundup bool) (result string, e error) {
 	num1, err := strconv.ParseFloat(first, 64)
 	if err != nil {
-		return fmt.Errorf("first value is invalid"), ""
+		return "", fmt.Errorf("first value is invalid")
 	}
 	num2, err := strconv.ParseFloat(second, 64)
 	if err != nil {
-		return fmt.Errorf("second value is invalid"), ""
+		return "", fmt.Errorf("second value is invalid")
 	}
 	if roundup {
-		return nil, fmt.Sprintf("%.2v", num1/num2)
+		return fmt.Sprintf("%.2v", num1/num2), nil
 	}
-	return nil, fmt.Sprintf("%v", num1/num2)
+	return fmt.Sprintf("%v", num1/num2), nil
 }
